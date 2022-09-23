@@ -14,16 +14,19 @@ func main() {
 		for i := 1; i < len(os.Args); i++ {
 			absen, _ := strconv.Atoi(os.Args[i])
 
-			fmt.Println()
+			if absen <= 0 {
+				fmt.Printf("\nMasukan nomor absen %v tidak valid!\n", absen)
+				continue
+			}
 
-			if absen == 0 || absen >= len(biodata) {
-				fmt.Printf("Biodata nomor absen %v tidak ditemukan!\n", absen)
+			if absen >= len(biodata) {
+				fmt.Printf("\nBiodata nomor absen %v tidak ditemukan!\n", absen)
 				continue
 			}
 
 			helpers.Print(biodata, absen)
 		}
 	} else {
-		fmt.Println("\nMasukan nomor absen setelah biodata.go")
+		fmt.Println("\nMasukan nomor absen setelah biodata.go!")
 	}
 }
