@@ -2,6 +2,7 @@ package main
 
 import (
 	"assignment-1/helpers"
+	"fmt"
 	"os"
 	"strconv"
 )
@@ -9,7 +10,11 @@ import (
 func main() {
 	biodata := helpers.Init()
 
-	absen, _ := strconv.Atoi(os.Args[1])
+	for i := 1; i < len(os.Args); i++ {
+		absen, _ := strconv.Atoi(os.Args[i])
 
-	helpers.Print(biodata, absen)
+		helpers.Print(biodata, absen)
+
+		fmt.Println()
+	}
 }
