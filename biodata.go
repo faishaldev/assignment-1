@@ -15,6 +15,11 @@ func main() {
 
 		fmt.Println()
 
+		if absen == 0 || absen >= len(biodata) {
+			fmt.Printf("Biodata nomor absen %v tidak ditemukan!\n", absen)
+			continue
+		}
+
 		helpers.Print(biodata, absen)
 	}
 }
