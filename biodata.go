@@ -13,8 +13,8 @@ func main() {
 	for i := 1; i < len(os.Args); i++ {
 		absen, _ := strconv.Atoi(os.Args[i])
 
-		helpers.Print(biodata, absen)
-
 		fmt.Println()
+
+		helpers.Print(biodata, absen)
 	}
 }
